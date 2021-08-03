@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { AccountContext } from './accountContext';
 
 
+
 const BoxContainer = styled.div`
     width: 280px;
     min-height: 550px;
@@ -117,6 +118,7 @@ const expandingTransition = {
 export function AccountBox(props) {
     const [isExpanded, setExpanded] = useState(false);
     const [active, setActive] = useState("signin");
+    const [deneme, setDeneme] = useState(true)
     const playExpandingAnimation = () => {
         setExpanded(true);
         setTimeout(() => {
@@ -135,13 +137,15 @@ export function AccountBox(props) {
         playExpandingAnimation();
         setTimeout(() => {
             setActive("signin");
+            
 
         }, 400);
     }
+    
 
 
 
-    const contextValue = { switchToSignup, switchToSignin };
+    const contextValue = { switchToSignup, switchToSignin};
 
 
     return (
@@ -149,7 +153,7 @@ export function AccountBox(props) {
             <BoxContainer>
                 <TopContainer>
                     <BackDrop initial={false} animate={isExpanded ? "expanded" : "collapsed"} variants={backdropVariants} transition={expandingTransition} />
-                    {active === "signin" && <HeaderContainer>
+                    {active === "signin"  && <HeaderContainer>
                         <HeaderText>
                             Welcome Back
                         </HeaderText>
@@ -165,10 +169,14 @@ export function AccountBox(props) {
                             Please sign-up to continue
                         </SmallText>
                     </HeaderContainer>}
+              
                 </TopContainer>
                 <InnerContainer>
                     {active === "signin" && <LoginForm />}
                     {active === "signup" && <SignupForm />}
+                    
+                   
+                   
                 </InnerContainer>
             </BoxContainer>
         </AccountContext.Provider>
