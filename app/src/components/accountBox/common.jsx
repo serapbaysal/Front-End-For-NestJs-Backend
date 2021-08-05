@@ -45,7 +45,7 @@ export const Input = styled.input`
         color: rgba(200,200,200,1);
     }
     &:not(:last-of-type) {
-        border-bottom: 1.5px solif rgba(200,200,200,0.4);
+        border-bottom: 1.5px solid rgba(200,200,200,0.4);
     }
 
     &:focus{

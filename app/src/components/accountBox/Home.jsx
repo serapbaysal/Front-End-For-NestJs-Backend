@@ -24,7 +24,7 @@ export function Home() {
     return (
    
       
-        <div>
+        <div className="home">
             HOME
         </div>
         
