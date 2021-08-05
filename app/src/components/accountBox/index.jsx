@@ -4,6 +4,7 @@ import { LoginForm } from './loginForm';
 import { SignupForm } from './signupForm';
 import { motion } from "framer-motion";
 import { AccountContext } from './accountContext';
+import { ResetPassword } from './resetPassword';
 
 
 
@@ -174,6 +175,7 @@ export function AccountBox(props) {
                 <InnerContainer>
                     {active === "signin" && <LoginForm />}
                     {active === "signup" && <SignupForm />}
+                    
                     
                    
                    

@@ -40,7 +40,7 @@ export function LoginForm(props) {
                 <Input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
             </FormContainer>
             <Marginer direction="vertical" margin={10} />
-            <MutedLink href="#">Forget your password?</MutedLink>
+            <MutedLink href="/auth/resetPassword">Forget your password?</MutedLink>
             <Marginer direction="vertical" margin="1.6em" />
             <SubmitButton type="submit" onClick={login}>Signin</SubmitButton>
             <Marginer direction="vertical" margin="1em" />
